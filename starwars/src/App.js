@@ -4,6 +4,7 @@ import Characters from './components/Character';
 //import axios from 'axios';
 
 import styled from "styled-components";
+import FilmData from './components/filmdata';
 
 const Headline = styled.h1`
   font-size: 3rem;
@@ -22,8 +23,11 @@ const App = () => {
   return (
     <div className="App">
       <Headline>Characters</Headline>
-      <Characters/>
+      <Characters />
+      <FilmData/>
     </div>
+
+    
   );
 
   

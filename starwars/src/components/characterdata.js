@@ -44,6 +44,27 @@ const Characterdata = props => {
     );
 };
 
+//const FilmData = props => {
+
+
+
+  //  return (
+  //      <div className="films" key={props.id}>
+  //          <p>Title: {props.film}</p>
+  //      </div>
+  //  );
+
+//};
+
+//const ResidentData = props => {
+
+ //   return (
+ //       <div>
+ //           <p>Residents: {props.name} </p> 
+             
+ //       </div>
+ //   )
+//}
 
 
 

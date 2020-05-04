@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Characterdata from "./characterdata"
+//import FilmData from "./characterdata"
 
 
 function Characters() {
@@ -16,11 +17,31 @@ function Characters() {
             .catch(err => {
                 console.log(err);
             });
+        axios.get('http://swapi.p4e.com/api/planets/1/')
+            .then((response => {
+                setCharacters(response.data.films)
+                
+            }))
+            
+            
+                .catch(err => {
+                    console.log(err);
+                });
+        axios.get('http://swapi.py4e.com/api/planets/1/')
+            .then((response => {
+                response.data.residents.map(arrItem => {
+                    return setCharacters(arrItem)
+                })
+            }))        
+                    
+                    .catch(err => {
+                        console.log(err);
+                    });
     
-    }, [])
+            }, [])
 
-    
-
+      
+        
 
     return (
 
@@ -35,13 +56,26 @@ function Characters() {
                 terrain={characters.terrain}
             />
         
-            
+            <div>
+                <div className='films'>
+                    <p></p>
+                </div>
+            </div>
+            <div>
+                <div className='residents'>
+                    <p></p>
+                </div>
+            </div>
 
             
-        </div>
-    )
-   
-};
+         </div>
+        
+        );
+
+    }
+
+              
 
 
-    export default Characters;
+
+        export default Characters;
